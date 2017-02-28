@@ -5,7 +5,7 @@
             .state('home',
             {
                 url: '/home',
-                templateUrl: '/app/home/home.template.html'
+                template: '<home>'
             })
             .state('about',
             {

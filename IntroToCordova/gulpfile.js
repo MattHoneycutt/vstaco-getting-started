@@ -1,5 +1,6 @@
 /// <binding ProjectOpened='buildAndServe' />
 'use strict';
+const fs = require('fs');
 const gulp = require('gulp');
 const del = require('del');
 const gulpHero = require('./node_modules/heroic-gulp/heroic.gulp.js')();
@@ -77,6 +78,24 @@ function browserSync () {
 }
 exports.browserSync = browserSync;
 
-exports.build = gulp.series(clean, gulp.parallel(exports.js, exports.css, htmlTemplates, staticAssets));
+exports.build = gulp.series(clean, gulp.parallel(exports.js, exports.css, htmlTemplates, staticAssets), copyDebugConfig);
 
 exports.buildAndServe = gulp.series(exports.build, gulp.parallel(watch, browserSync));
+
+function copyDebugConfig(done) {
+    fs.createReadStream('config/config.debug.js').pipe(fs.createWriteStream('www/config.js'));
+    done();
+}
+exports.copyDebugConfig = copyDebugConfig;
+
+function copyStagingConfig(done) {
+    fs.createReadStream('config/config.staging.js').pipe(fs.createWriteStream('www/config.js'));
+    done();
+}
+exports.copyStagingConfig = copyStagingConfig;
+
+function copyProductionConfig(done) {
+    fs.createReadStream('config/config.production.js').pipe(fs.createWriteStream('www/config.js'));
+    done();
+}
+exports.copyProductionConfig = copyProductionConfig;

@@ -7,28 +7,28 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "io.cordova.intro"
-        },
-        "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "io.cordova.intro"
-        },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "io.cordova.intro"
-        },
-        "cordova-plugin-inappbrowser": {
-            "PACKAGE_NAME": "io.cordova.intro"
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.heroicapplications.vstaco.sample"
         },
         "cordova-plugin-geolocation": {
-            "PACKAGE_NAME": "io.cordova.intro"
+            "PACKAGE_NAME": "com.heroicapplications.vstaco.sample"
         },
-        "cordova-plugin-camera": {
-            "PACKAGE_NAME": "io.cordova.intro"
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.heroicapplications.vstaco.sample"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.heroicapplications.vstaco.sample"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.heroicapplications.vstaco.sample"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.heroicapplications.vstaco.sample"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-compat": {
-            "PACKAGE_NAME": "io.cordova.intro"
+            "PACKAGE_NAME": "com.heroicapplications.vstaco.sample"
         }
     }
 }
